@@ -106,7 +106,7 @@ curl -X POST http://<minikube-ip>:<port-nginx>/meetings  \
 }'
 ```
 
-***Test NGINX Configuration**
+**Test NGINX Configuration**
 ```
 curl -A "Googlebot" http://<minikube-ip>:<nginx-port>/
 ```
