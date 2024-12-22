@@ -105,3 +105,25 @@ curl -X POST http://<minikube-ip>:<port-nginx>/meetings  \
   "status": "completed"
 }'
 ```
+
+***Test NGINX Configuration**
+```
+curl -A "Googlebot" http://<minikube-ip>:<nginx-port>/
+```
+**Expected Output:**
+```
+ This is a restricted area.
+```
+**Route Other Traffic to Golang Application**
+```
+curl http://<minikube-ip>:<nginx-port>/meetings
+```
+
+# Conclusion
+- The application is now fully deployed on Kubernetes, with Prometheus monitoring and NGINX routing.
+- You can manage meetings using the Golang API, and the metrics are exposed for Prometheus.
+- NGINX handles routing for Google bots, /blog traffic, and all other requests.
+# How to contribute
+All contributions are welcomed. If you find any bugs, please file an issue.
+
+moradiradpv@gmail.com
